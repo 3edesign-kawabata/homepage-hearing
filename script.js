@@ -21,8 +21,12 @@
 
   function updateSiteType() {
     var siteType = getChecked('site_type');
+    var isLp = siteType === 'lp';
     siteTypeOtherField.classList.toggle('hidden', siteType !== 'other');
     ecFields.classList.toggle('hidden', siteType !== 'ec');
+    document.getElementById('section-page-structure').classList.toggle('hidden', isLp);
+    document.getElementById('section-features').classList.toggle('hidden', isLp);
+    document.getElementById('section-cms').classList.toggle('hidden', isLp);
   }
 
   // === ECプラットフォーム ===

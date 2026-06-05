@@ -51,10 +51,6 @@
             <span>リニューアル</span>
           </label>
           <label class="radio-label">
-            <input type="radio" name="purpose" value="lp_new">
-            <span>LP新規</span>
-          </label>
-          <label class="radio-label">
             <input type="radio" name="purpose" value="other">
             <span>その他</span>
           </label>
@@ -148,12 +144,8 @@
       </section>
 
       <!-- 4. ページ構成 -->
-      <section class="form-section">
+      <section class="form-section" id="section-page-structure">
         <h2 class="section-title">ページ構成</h2>
-        <div class="field field--short">
-          <label for="page_count">ページ数の目安</label>
-          <textarea id="page_count" name="page_count" rows="1" placeholder="例：5〜8ページ"></textarea>
-        </div>
         <div class="field">
           <label>必要なページ</label>
           <div class="checkbox-group">
@@ -204,7 +196,7 @@
       </section>
 
       <!-- 5. 機能要件 -->
-      <section class="form-section">
+      <section class="form-section" id="section-features">
         <h2 class="section-title">機能要件</h2>
         <div class="checkbox-group">
           <label class="checkbox-label">
@@ -249,7 +241,7 @@
       </section>
 
       <!-- 6. CMS・更新 -->
-      <section class="form-section">
+      <section class="form-section" id="section-cms">
         <h2 class="section-title">CMS・更新</h2>
         <div class="field">
           <label>CMS</label>
@@ -543,40 +535,7 @@
         </div>
       </section>
 
-      <!-- 14. 納品方法 -->
-      <section class="form-section">
-        <h2 class="section-title">納品方法</h2>
-        <div class="checkbox-group">
-          <label class="checkbox-label">
-            <input type="checkbox" name="delivery" value="usb">
-            <span>USB</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="delivery" value="email">
-            <span>メール</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="delivery" value="line">
-            <span>LINE</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="delivery" value="online_storage">
-            <span>ギガファイル便などオンラインストレージ</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="delivery" value="other" id="delivery-other">
-            <span>その他</span>
-          </label>
-        </div>
-        <div id="delivery-other-field" class="sub-section hidden">
-          <div class="field">
-            <label>その他の納品方法</label>
-            <textarea name="delivery_other_text" rows="1" placeholder="具体的な納品方法を入力してください"></textarea>
-          </div>
-        </div>
-      </section>
-
-      <!-- 15. その他・備考 -->
+      <!-- 14. その他・備考 -->
       <section class="form-section">
         <h2 class="section-title">その他・備考</h2>
         <div class="field">
