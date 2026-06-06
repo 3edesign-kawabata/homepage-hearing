@@ -577,6 +577,15 @@ input[type="color"] {
     width: 100% !important;
   }
 
+  textarea {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    resize: none !important;
+    white-space: pre-wrap !important;
+  }
+
   .field--short {
     max-width: 180pt;
   }
