@@ -151,3 +151,23 @@
   updateServer();
   updateBrandColor();
 })();
+
+// === 印刷時: textarea を div に差し替えて全表示 ===
+window.addEventListener('beforeprint', function () {
+  document.querySelectorAll('textarea').forEach(function (el) {
+    var div = document.createElement('div');
+    div.className = 'print-proxy';
+    div.textContent = el.value;
+    el.parentNode.insertBefore(div, el.nextSibling);
+    el.classList.add('print-hidden');
+  });
+});
+
+window.addEventListener('afterprint', function () {
+  document.querySelectorAll('.print-proxy').forEach(function (div) {
+    div.remove();
+  });
+  document.querySelectorAll('.print-hidden').forEach(function (el) {
+    el.classList.remove('print-hidden');
+  });
+});
